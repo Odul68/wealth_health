@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  max-width: 1440px;
+}
+
+body {
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(circle, rgb(255, 255, 255) 32%, rgb(227, 227, 227) 100%);
+  height: 100vh;
+}
+.App .Header {
+  margin: 1rem 0;
+  height: 5rem;
+}
+.App .currentEmployeesListLink {
+  margin-bottom: 2rem;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #097e7b;
+  border-radius: 5px 5px 20px 20px;
+}
+.formSection h1 {
+  padding: 2rem;
+  color: white;
+}
+
+.createEmployeeContainer {
+  width: 20rem;
+  position: relative;
+  background-color: white;
+  padding: 1rem;
+  border: 2px solid #097e7b;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.createEmployeeContainer .inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+.createEmployeeContainer .inputContainer input {
+  border: none;
+  border-bottom: 1px solid lightgrey;
+}
+.createEmployeeContainer .inputContainer input:focus {
+  outline: none;
+}
+.createEmployeeContainer .saveButton {
+  padding: 10px 40px;
+  color: white;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background-color: #097e7b;
+  margin-top: 1rem;
+  align-self: center;
+}
+
+table {
+  border-spacing: 8px 2px;
+}
+
+th {
+  width: 7rem;
+  text-align: start;
+}
+
+.default {
+  background-image: url(../images/sortingArrows.png);
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.up {
+  background-image: url(../images/sortingArrowUp.png);
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.down {
+  background-image: url(../images/sortingArrowDown.png);
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.filterOptions {
+  width: 65rem;
+  display: flex;
+  justify-content: space-between;
+}
+.filterOptions .searchBar {
+  margin-bottom: 1rem;
+  background-color: white;
+  padding: 6px;
+  border-radius: 5px;
+}
+.filterOptions .searchBar input {
+  padding-left: 8px;
+  height: 1.4rem;
+  width: 16rem;
+  margin: auto;
+  border: none;
+}
+.filterOptions .searchBar input:focus {
+  outline: none;
+}
+
+.perPage {
+  display: flex;
+  margin: 1rem 1rem 1rem 0;
+}
+.perPage select {
+  outline: none;
+}
+.perPage p {
+  margin: 0 6px;
+}
+
+.paginationNav {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+.paginationNav .paginationInfos {
+  display: flex;
+}
+.paginationNav .paginationInfos p {
+  padding: 2px;
+}
+.paginationNav .paginationCommands {
+  margin: 1.1rem;
+}
+.paginationNav .paginationCommands a {
+  padding: 2rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.employeeCreatedConfirmation {
+  display: flex;
+  top: 40%;
+  background-color: white;
+  border-radius: 5px;
+  position: absolute;
+  padding: 1rem;
+  background-color: #ab4610;
+}
+.employeeCreatedConfirmation h2 {
+  padding: 1rem;
+  color: white;
+}
+.employeeCreatedConfirmation .fa-times {
+  cursor: pointer;
+  color: white;
+}/*# sourceMappingURL=style.css.map */

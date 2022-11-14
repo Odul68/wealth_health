@@ -1,0 +1,198 @@
+
+* {
+    box-sizing: border-box;
+    // min-height: 100%;
+    max-width: 1440px;
+}
+
+body {
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: radial-gradient(circle, rgb(255 255 255) 32%, rgb(227 227 227) 100%);
+    height: 100vh;
+
+
+    .Header {
+        margin: 1rem 0;
+        height: 5rem;
+
+    }
+
+    .currentEmployeesListLink {
+        margin-bottom: 2rem;
+    }
+}
+
+.formSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #097e7b;
+    border-radius: 5px 5px 20px 20px;
+
+    h1 {
+        padding: 2rem;
+        color: white;
+    }
+}
+
+.createEmployeeContainer {
+    width: 20rem;
+    position: relative;
+    background-color: white;
+    padding: 1rem;
+    border: 2px solid #097e7b;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .inputContainer {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0;  
+        input {
+            border: none;      
+            border-bottom: 1px solid lightgrey;
+            &:focus {
+                outline: none;
+            }
+
+        }
+    }
+
+    .saveButton {
+        padding: 10px 40px;
+        color: white;
+        font-weight: 800;
+        letter-spacing: 2px;
+        background-color: #097e7b;
+        margin-top: 1rem;
+        align-self: center;
+    }
+}
+
+table {
+    border-spacing: 8px 2px;
+}
+
+
+th {
+    width: 7rem; 
+    text-align: start;
+}
+.default {
+    background-image: url(../images/sortingArrows.png);
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.up {
+    background-image: url(../images/sortingArrowUp.png);
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.down {
+    background-image: url(../images/sortingArrowDown.png);
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.filterOptions {
+    width: 65rem;
+    display: flex;
+    justify-content: space-between;
+
+    .searchBar {
+        margin-bottom: 1rem;
+        background-color: white;
+        padding: 6px;
+        border-radius: 5px;
+
+        input {
+            padding-left: 8px;
+            height: 1.4rem;
+            width: 16rem;
+            margin: auto;
+            border: none;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+.perPage {
+    display: flex;
+    margin: 1rem 1rem 1rem 0; 
+
+    select {
+        outline: none;
+    }
+
+    p {
+        margin: 0 6px;
+    }
+}
+
+
+.paginationNav {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+
+    .paginationInfos {
+        display: flex;
+    
+        p {
+            padding: 2px;
+        }
+    }
+
+    .paginationCommands {
+        margin: 1.1rem;
+
+        a {
+            padding: 2rem;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+
+
+
+.employeeCreatedConfirmation {
+    display: flex;
+    top: 40%;
+    background-color: white;
+    // border: lightgrey solid 2px;
+    border-radius: 5px;
+    position: absolute;
+    padding: 1rem;
+    background-color: #ab4610;
+
+    h2 {
+        padding: 1rem;
+        color: white;
+    }
+
+    .fa-times {
+        cursor: pointer;
+        color: white;
+    }
+}
+
