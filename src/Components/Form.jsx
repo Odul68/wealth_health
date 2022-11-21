@@ -1,12 +1,13 @@
 import DatePicker, { getDefaultLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { useState } from "react";
-import { states } from "../Data/Data";
+// import { useState } from "react";
+// import { states } from "../Data/Data";
 
 export default function Input({ name, type, value, onChange, label }) {
   let nameFormat = name.replaceAll(" ", "-");
   nameFormat = nameFormat.toLowerCase();
-  const [startDate, setStartDate] = useState(new Date());
+  // const [startDate, setStartDate] = useState(value);
+  // console.log(value, type);
   return (
     <>
       <div className="inputContainer">
@@ -14,9 +15,9 @@ export default function Input({ name, type, value, onChange, label }) {
         {type === "date" ? (
           <DatePicker
             dateFormat="dd/MM/yyyy"
-            selected={startDate}
+            selected={value || new Date()}
             onChange={onChange}
-            required
+            // required
           />
         ) : (
           <input
@@ -25,7 +26,7 @@ export default function Input({ name, type, value, onChange, label }) {
             type={type}
             onChange={(e) => onChange(e)}
             min={0}
-            required
+            // required
           />
         )}
       </div>

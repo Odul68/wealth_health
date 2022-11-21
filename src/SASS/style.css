@@ -166,4 +166,11 @@ th {
 .employeeCreatedConfirmation .fa-times {
   cursor: pointer;
   color: white;
+}
+
+.dropdown {
+  margin: 1rem 0 3rem 0;
+}
+.dropdown .dropdownButton {
+  margin-top: 6px;
 }/*# sourceMappingURL=style.css.map */
