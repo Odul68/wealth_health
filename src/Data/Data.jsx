@@ -244,7 +244,7 @@ export const employees = [
     firstName: "Tony",
     startDate: "02/03/2022",
     department: "Sales",
-    dateOfBirth: "22/01/1980",
+    dateOfBirth: "01/07/1980",
     street: "Pumpkin street",
     city: "New York",
     state: "New York",

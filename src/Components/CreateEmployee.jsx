@@ -5,14 +5,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { createEmployee } from "../Redux/Reducer";
 import { useEffect } from "react";
 import { Dropdown } from "dropdown-odul68";
-import { current } from "@reduxjs/toolkit";
 
 export default function CreateEmployee() {
   const employee = useSelector((state) => state.employee);
   const dispatch = useDispatch();
   const [show, setShow] = useState(false);
   const modal = useRef();
-  // const [startDate, setStartDate] = useState(value);
 
   const [input, setInput] = useState({
     id: employee.length + 1,
@@ -27,18 +25,28 @@ export default function CreateEmployee() {
     department: "",
   });
 
-  /** To look for solution here to format Date */
   function handleChangeValue(e, scope = null) {
     if (!e.target) return setInput({ ...input, [scope]: new Date(e) });
     const { name, value } = e.target;
     return setInput({ ...input, [name]: value });
   }
 
+  const [selectedState, setSelectedState] = useState(states[0]);
+  const [selectedDepartment, setSelectedDepartment] = useState(departments[0]);
+
+  function selectState(e) {
+    setSelectedState(e);
+    setInput({ ...input, state: e.name });
+  }
+
+  function selectDepartment(e) {
+    setSelectedDepartment(e);
+    setInput({ ...input, department: e.name });
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
-
     dispatch(createEmployee(input));
-
     setShow(() => true);
   }
 
@@ -51,6 +59,7 @@ export default function CreateEmployee() {
       setInput((prev) => ({ ...prev, id: employee.length + 1 }));
     }
   }, [employee]);
+
   console.log(input);
   return (
     <>
@@ -100,10 +109,11 @@ export default function CreateEmployee() {
             onChange={handleChangeValue}
           ></Input>
           <Dropdown
+            selected={selectedState}
             label="State"
             arr={states}
             field="name"
-            // value={input.state}
+            onClick={selectState}
           />
 
           <Input
@@ -114,7 +124,13 @@ export default function CreateEmployee() {
             onChange={handleChangeValue}
           ></Input>
         </fieldset>
-        <Dropdown label="Department" arr={departments} field="name" />
+        <Dropdown
+          selected={selectedDepartment}
+          field="name"
+          label="Department"
+          arr={departments}
+          onClick={selectDepartment}
+        />
         <button className="saveButton" type="submit">
           Save
         </button>

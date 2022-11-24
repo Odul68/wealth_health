@@ -6,7 +6,7 @@ export default function TableBody({ tableData, columns }) {
           <tr key={data.id}>
             {columns.map(({ accessor }) => {
               console.log(data[accessor]);
-              if (accessor === "dateOfBirth") {
+              if (accessor === "startDate" || accessor === "dateOfBirth") {
                 return (
                   <td key={accessor}>
                     {new Date(data[accessor]).toLocaleDateString()}
