@@ -6,6 +6,7 @@ export default function Pagination({
   currentPage,
   setCurrentPage,
   entries,
+  employeePerPage,
 }) {
   const numberOfEmployees = useSelector((state) => state.employee.length);
 
@@ -15,14 +16,16 @@ export default function Pagination({
   const prevPage = () => {
     if (currentPage !== 1) setCurrentPage(currentPage - 1);
   };
+
+  console.log(currentPage);
   return (
     <nav className="paginationNav">
       <div className="paginationInfos">
         <p>
-          Showing<span> 1</span>
+          Showing<span> 1 </span>
         </p>
         <p>
-          to<span> {entries}</span>
+          to<span> {employeePerPage}</span>
         </p>
         <p>
           of<span> {numberOfEmployees}</span>

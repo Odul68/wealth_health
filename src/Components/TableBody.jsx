@@ -5,7 +5,6 @@ export default function TableBody({ tableData, columns }) {
         return (
           <tr key={data.id}>
             {columns.map(({ accessor }) => {
-              console.log(data[accessor]);
               if (accessor === "startDate" || accessor === "dateOfBirth") {
                 return (
                   <td key={accessor}>

@@ -55,6 +55,7 @@ export default function Table() {
   );
   const nPages = Math.ceil(tableData.length / recordsPerPage);
 
+  console.log(nPages);
   return (
     <>
       <section className="filterOptions">
@@ -93,6 +94,7 @@ export default function Table() {
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
         entries={recordsPerPage}
+        employeePerPage={tableData.length}
       />
     </>
   );
