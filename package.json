@@ -11,6 +11,7 @@
     "dropdown-odul68": "^0.2.6",
     "dropdown-odul68-openclassrooms": "^0.1.0",
     "react": "^18.2.0",
+    "react-data-table-component": "^7.5.3",
     "react-datepicker": "^4.8.0",
     "react-dom": "^18.2.0",
     "react-dropdown-select": "^4.9.0",

@@ -80,57 +80,7 @@ body {
     }
 }
 
-table {
-    border-spacing: 8px 2px;
-}
 
-
-th {
-    width: 7rem; 
-    text-align: start;
-}
-.default {
-    background-image: url(../images/sortingArrows.png);
-    background-size: 12px;
-    background-repeat: no-repeat;
-    background-position: right;
-}
-.up {
-    background-image: url(../images/sortingArrowUp.png);
-    background-size: 12px;
-    background-repeat: no-repeat;
-    background-position: right;
-}
-.down {
-    background-image: url(../images/sortingArrowDown.png);
-    background-size: 12px;
-    background-repeat: no-repeat;
-    background-position: right;
-}
-
-.filterOptions {
-    width: 65rem;
-    display: flex;
-    justify-content: space-between;
-
-    .searchBar {
-        margin-bottom: 1rem;
-        background-color: white;
-        padding: 6px;
-        border-radius: 5px;
-
-        input {
-            padding-left: 8px;
-            height: 1.4rem;
-            width: 16rem;
-            margin: auto;
-            border: none;
-            &:focus {
-                outline: none;
-            }
-        }
-    }
-}
 
 .perPage {
     display: flex;
@@ -144,32 +94,6 @@ th {
         margin: 0 6px;
     }
 }
-
-
-.paginationNav {
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
-
-    .paginationInfos {
-        display: flex;
-    
-        p {
-            padding: 2px;
-        }
-    }
-
-    .paginationCommands {
-        margin: 1.1rem;
-
-        a {
-            padding: 2rem;
-            text-decoration: none;
-            cursor: pointer;
-        }
-    }
-}
-
 
 
 
@@ -204,3 +128,41 @@ th {
     }
 }
 
+
+.kDEcCH {
+display: contents !important;
+
+}
+
+.searchBar{
+    display: flex;
+}
+
+.textField {
+    height: 32px;
+    width: 200px;
+    border-radius: 3px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 1px solid #e5e5e5;
+    padding: 0 32px 0 16px;
+
+    &:hover {
+      cursor: pointer;
+    }
+}
+
+.clearButton {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 34px;
+    width: 32px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
