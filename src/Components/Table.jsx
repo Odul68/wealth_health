@@ -16,8 +16,13 @@ export default function Table() {
 
   const filteredItems = employee.filter(
     (item) =>
-      item.firstName &&
-      item.firstName.toLowerCase().includes(filterText.toLowerCase())
+      (item.firstName &&
+        item.firstName.toLowerCase().includes(filterText.toLowerCase())) ||
+      (item.lastName &&
+        item.lastName.toLowerCase().includes(filterText.toLowerCase())) ||
+      (item.state &&
+        item.state.toLowerCase().includes(filterText.toLowerCase())) ||
+      (item.city && item.city.toLowerCase().includes(filterText.toLowerCase()))
   );
 
   const FilterComponent = ({ filterText, onFilter, onClear }) => (
@@ -71,7 +76,6 @@ export default function Table() {
         subHeader
         subHeaderComponent={subHeaderComponentMemo}
         paginationComponentOptions={paginationComponentOptions}
-        // sortIcon={sortIcon}
       />
     </>
   );
