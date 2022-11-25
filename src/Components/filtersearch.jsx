@@ -1,3 +1,9 @@
+/**
+ *
+ * @param {filterText, onFilter, onClear}
+ * @returns FilterEmployees component with input and button to filter employees in the Table
+ */
+
 export default function filterEmployees({ filterText, onFilter, onClear }) {
   return (
     <div className="searchBar">

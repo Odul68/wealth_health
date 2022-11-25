@@ -6,6 +6,12 @@ import { createEmployee } from "../Redux/Reducer";
 import { useEffect } from "react";
 import { Dropdown } from "dropdown-odul68";
 
+/**
+ * function to add new employee
+ * form with date selector and dropdown
+ * @returns new employee dispatched with redux
+ *
+ */
 export default function CreateEmployee() {
   const employee = useSelector((state) => state.employee);
   const dispatch = useDispatch();
@@ -30,6 +36,13 @@ export default function CreateEmployee() {
     const { name, value } = e.target;
     return setInput({ ...input, [name]: value });
   }
+
+  /**
+   * Dropdown data selection
+   * selected value is the showed before opening it
+   * Send selected value to input for new employee data
+   *
+   */
 
   const [selectedState, setSelectedState] = useState(states[0]);
   const [selectedDepartment, setSelectedDepartment] = useState(departments[0]);
@@ -60,7 +73,6 @@ export default function CreateEmployee() {
     }
   }, [employee]);
 
-  console.log(input);
   return (
     <>
       <form onSubmit={handleSubmit} className="createEmployeeContainer">
@@ -115,7 +127,6 @@ export default function CreateEmployee() {
             field="name"
             onClick={selectState}
           />
-
           <Input
             name="zipCode"
             label="Zip Code"

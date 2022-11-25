@@ -2,8 +2,14 @@ import { columns } from "../Data/Data";
 import { useState } from "react";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
-
 import DataTable from "react-data-table-component";
+
+/**
+ * Create a table with all employees' data
+ * possibility to filter by firstName, lastName, city and state
+ * Pagination and possibility to select how many employees per page to show
+ * @returns
+ */
 
 export default function Table() {
   const employee = useSelector((state) => state.employee);

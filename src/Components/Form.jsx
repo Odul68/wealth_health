@@ -1,10 +1,13 @@
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-export default function Input({ name, type, value, onChange, label }) {
-  let nameFormat = name.replaceAll(" ", "-");
-  nameFormat = nameFormat.toLowerCase();
+/**
+ * Create an Input component for the form
+ * @param {name, type, value, onChange, label}
+ * @returns Input Component to be used in the form of CreateEmployee
+ */
 
+export default function Input({ name, type, value, onChange, label }) {
   return (
     <>
       <div className="inputContainer">
