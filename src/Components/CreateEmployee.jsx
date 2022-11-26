@@ -78,14 +78,15 @@ export default function CreateEmployee() {
       <form onSubmit={handleSubmit} className="createEmployeeContainer">
         <Input
           name="firstName"
+          id="firstName"
           label="First Name"
           value={input.firstName}
           type="text"
           onChange={handleChangeValue}
-          aria-labelledby="firstname"
         ></Input>
         <Input
           name="lastName"
+          id="lastName"
           label="Last name"
           value={input.lastName}
           type="text"
@@ -94,6 +95,7 @@ export default function CreateEmployee() {
         ></Input>
         <Input
           name="birthdate"
+          id="birthdate"
           label="Birthdate"
           value={input.dateOfBirth}
           type="date"
@@ -102,6 +104,7 @@ export default function CreateEmployee() {
         ></Input>
         <Input
           name="startDate"
+          id="startDate"
           label="Start date"
           value={input.startDate}
           type="date"
@@ -112,6 +115,7 @@ export default function CreateEmployee() {
           <legend>Address</legend>
           <Input
             name="street"
+            id="street"
             label="Street"
             value={input.street}
             type="text"
@@ -120,6 +124,7 @@ export default function CreateEmployee() {
           ></Input>
           <Input
             name="city"
+            id="city"
             label="City"
             value={input.city}
             type="text"
@@ -127,6 +132,8 @@ export default function CreateEmployee() {
             aria-labelledby="city"
           ></Input>
           <Dropdown
+            name="stateDropdown"
+            id="stateDropdown"
             selected={selectedState}
             label="State"
             arr={states}
@@ -136,6 +143,7 @@ export default function CreateEmployee() {
           />
           <Input
             name="zipCode"
+            id="zipCode"
             label="Zip Code"
             value={input.zipCode}
             type="text"
@@ -144,6 +152,8 @@ export default function CreateEmployee() {
           ></Input>
         </fieldset>
         <Dropdown
+          name="departmentDropdown"
+          id="departmentDropdown"
           selected={selectedDepartment}
           field="name"
           label="Department"
