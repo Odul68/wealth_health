@@ -14,19 +14,19 @@ export default function Input({ name, type, value, onChange, label }) {
         <label htmlFor={name}> {label} </label>
         {type === "date" ? (
           <DatePicker
+            id={name}
             dateFormat="dd/MM/yyyy"
             selected={value || new Date()}
             onChange={onChange}
-            // required
           />
         ) : (
           <input
             name={name}
+            id={name}
             value={value}
             type={type}
             onChange={(e) => onChange(e)}
             min={0}
-            // required
           />
         )}
       </div>
