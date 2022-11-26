@@ -2,6 +2,10 @@
 
 Projet 14 - Faites passer une librairie jQuery vers React
 
+## Deployment
+
+https://hrnet-odul68-openclassrooms.netlify.app/
+
 ## Installation
 
 ### `Installing and starting`
