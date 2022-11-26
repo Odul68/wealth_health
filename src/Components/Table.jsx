@@ -20,6 +20,12 @@ export default function Table() {
     rowsPerPageText: "Entries",
   };
 
+  /**
+   * Filter function by :
+   * firstName / lastName / state / city
+   * return results including valuye of filterText
+   */
+
   const filteredItems = employee.filter(
     (item) =>
       (item.firstName &&
@@ -55,6 +61,7 @@ export default function Table() {
     </>
   );
 
+  /** To keep value from being recalculated */
   const subHeaderComponentMemo = useMemo(() => {
     const handleClear = () => {
       if (filterText) {

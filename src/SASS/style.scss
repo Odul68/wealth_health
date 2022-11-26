@@ -96,9 +96,6 @@ body {
 }
 
 
-
-
-
 .employeeCreatedConfirmation {
     display: flex;
     top: 40%;
@@ -114,7 +111,7 @@ body {
         color: white;
     }
 
-    .fa-times {
+    .closeModal {
         cursor: pointer;
         color: white;
     }
@@ -136,11 +133,12 @@ display: contents !important;
 
 .searchBar{
     display: flex;
+    margin-bottom: 1rem;
 }
 
 .textField {
     height: 32px;
-    width: 200px;
+    width: 290px;
     border-radius: 3px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -159,10 +157,11 @@ display: contents !important;
     border-bottom-left-radius: 0;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    height: 34px;
+    height: 32px;
     width: 32px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid lightgrey;
 }

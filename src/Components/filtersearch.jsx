@@ -17,7 +17,7 @@ export default function filterEmployees({ filterText, onFilter, onClear }) {
         value={filterText}
         onChange={onFilter}
       />
-      <button> className="clearButton" type="button" onClick={onClear}</button>
+      <button className="clearButton" type="button" onClick={onClear}></button>
     </div>
   );
 }

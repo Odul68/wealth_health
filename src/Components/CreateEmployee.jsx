@@ -159,11 +159,9 @@ export default function CreateEmployee() {
       {show && (
         <div ref={modal} className="employeeCreatedConfirmation">
           <h2>Employee created !</h2>
-          <i
-            className="fa fa-times"
-            aria-hidden="true"
-            onClick={closeModal}
-          ></i>
+          <span className="closeModal" aria-hidden="true" onClick={closeModal}>
+            X
+          </span>
         </div>
       )}
     </>

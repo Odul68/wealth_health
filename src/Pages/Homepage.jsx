@@ -2,6 +2,11 @@ import Header from "../Components/Header";
 import CreateEmployee from "../Components/CreateEmployee";
 import { Link } from "react-router-dom";
 
+/**
+ * Homepage using components Header and CreateEmployee
+ * Form to create a new employee
+ */
+
 export default function Homepage() {
   return (
     <>
