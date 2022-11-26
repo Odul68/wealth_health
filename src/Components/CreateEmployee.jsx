@@ -82,6 +82,7 @@ export default function CreateEmployee() {
           value={input.firstName}
           type="text"
           onChange={handleChangeValue}
+          aria-labelledby="firstname"
         ></Input>
         <Input
           name="lastName"
@@ -89,6 +90,7 @@ export default function CreateEmployee() {
           value={input.lastName}
           type="text"
           onChange={handleChangeValue}
+          aria-labelledby="lastName"
         ></Input>
         <Input
           name="birthdate"
@@ -96,6 +98,7 @@ export default function CreateEmployee() {
           value={input.dateOfBirth}
           type="date"
           onChange={(date) => handleChangeValue(date, "dateOfBirth")}
+          aria-labelledby="birthdate"
         ></Input>
         <Input
           name="startDate"
@@ -103,6 +106,7 @@ export default function CreateEmployee() {
           value={input.startDate}
           type="date"
           onChange={(date) => handleChangeValue(date, "startDate")}
+          aria-labelledby="startDate"
         ></Input>
         <fieldset>
           <legend>Address</legend>
@@ -112,6 +116,7 @@ export default function CreateEmployee() {
             value={input.street}
             type="text"
             onChange={handleChangeValue}
+            aria-labelledby="street"
           ></Input>
           <Input
             name="city"
@@ -119,6 +124,7 @@ export default function CreateEmployee() {
             value={input.city}
             type="text"
             onChange={handleChangeValue}
+            aria-labelledby="city"
           ></Input>
           <Dropdown
             selected={selectedState}
@@ -126,6 +132,7 @@ export default function CreateEmployee() {
             arr={states}
             field="name"
             onClick={selectState}
+            aria-labelledby="State"
           />
           <Input
             name="zipCode"
@@ -133,6 +140,7 @@ export default function CreateEmployee() {
             value={input.zipCode}
             type="text"
             onChange={handleChangeValue}
+            aria-labelledby="zipCode"
           ></Input>
         </fieldset>
         <Dropdown
@@ -141,6 +149,7 @@ export default function CreateEmployee() {
           label="Department"
           arr={departments}
           onClick={selectDepartment}
+          aria-labelledby="Department"
         />
         <button className="saveButton" type="submit">
           Save
