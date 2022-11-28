@@ -298,7 +298,6 @@ export const columns = [
     selector: (row) => row.startDate,
     sortable: true,
     format: (row) => new Date(row.startDate).toLocaleDateString(),
-    // sortFunction: triStartDate,
   },
   {
     name: "Department",
@@ -310,8 +309,6 @@ export const columns = [
     selector: (row) => row.dateOfBirth,
     sortable: true,
     format: (row) => new Date(row.dateOfBirth).toLocaleDateString(),
-
-    // sortFunction: triBirthDate,
   },
   {
     name: "Street",
