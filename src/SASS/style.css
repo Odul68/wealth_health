@@ -13,11 +13,12 @@ body {
   flex-direction: column;
   align-items: center;
   background: radial-gradient(circle, rgb(255, 255, 255) 32%, rgb(227, 227, 227) 100%);
-  height: 100vh;
+  height: 100%;
+  min-height: 50rem;
 }
 .App .Header {
   margin: 1rem 0;
-  height: 5rem;
+  height: 1rem;
 }
 .App .currentEmployeesListLink {
   margin-bottom: 2rem;
@@ -29,6 +30,7 @@ body {
   align-items: center;
   background-color: #097e7b;
   border-radius: 5px 5px 20px 20px;
+  margin-bottom: 2rem;
 }
 .formSection h1 {
   padding: 2rem;

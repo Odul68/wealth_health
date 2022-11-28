@@ -294,7 +294,7 @@ export const columns = [
     sortable: true,
   },
   {
-    name: "startDate",
+    name: "Start Date",
     selector: (row) => row.startDate,
     sortable: true,
     format: (row) => new Date(row.startDate).toLocaleDateString(),
@@ -306,7 +306,7 @@ export const columns = [
     sortable: true,
   },
   {
-    name: "dateOfBirth",
+    name: "Date of birth",
     selector: (row) => row.dateOfBirth,
     sortable: true,
     format: (row) => new Date(row.dateOfBirth).toLocaleDateString(),
